@@ -5,11 +5,6 @@ function vardump($var)
 {
   print '<pre>' . print_r($var, 1) . '</pre>';
 }
-$car1 = new Car();
-vardump($car1);
-
-$car1->color = 'red';
-$car1->brand = 'volvo';
-$car1->speed = 200;
+$car1 = new Car('red', 4, 180, 'Toyota');
 
 echo $car1->getCar();
