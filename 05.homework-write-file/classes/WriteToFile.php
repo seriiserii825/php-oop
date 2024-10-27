@@ -26,7 +26,7 @@ class WriteToFile
   public function write($content)
   {
     // Write $somecontent to our opened file.
-    if (fwrite($this->fp, $content) === FALSE) {
+    if (fwrite($this->fp, $content.PHP_EOL) === FALSE) {
       echo "Cannot write to file ($this->file_name)";
       exit;
     }
